@@ -35,19 +35,19 @@ __ESP-NOW__  là một giao thức được phát triển bới Espressif, cho p
 ## 💻 Danh Sách Các Chức Năng Của Hệ Thống
 
 __Bộ Phận Phân Tích Hình Ảnh__
-- [x] Phát hiện vật thể với mô hình học máy tự huấn luyện
-- [x] 
+- [x] Phát hiện vật thể với mô hình học máy YOLO tự huấn luyện
+- [x] Gửi cảnh báo đến thiết bị nhận cảnh báo từ xe thông qua sóng ESP-NOW
 
 __Bộ Phận Cảnh Báo Từ Xa__
-- [x] Receive notification via ESP NOW
-- [x] Alert depend on setting
-- [ ] Good looking UI using SquareLine Studio
-- [ ] Notification history
-- [ ] Expansion port
-- [ ] Connection lost notification 
+- [x] Nhận cảnh báo qua sóng ESP-NOW
+- [x] Cảnh báo dựa trên thông điệp nhận được kết hợp cài đặt trường hợp cảnh báo
+- [ ] Giao diện người dùng đẹp sử dụng SquareLine Studio
+- [ ] Lưu lịch sử cảnh báo
+- [ ] Có cổng kết nối thiết bị ngoại vi
+- [x] Báo mất kết nối với trung tâm điều khiển
 
 __Bộ Phận Theo Dõi Tự Động__
-- [x] Auto move camera facing to object
+- [x] Tự động xoay camera theo đối tượng vi phạm phát hiện được
 
 __Ứng Dụng Điều Khiển Window__
 - [x] Whole system work right in Windows OS
