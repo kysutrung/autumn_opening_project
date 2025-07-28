@@ -13,18 +13,18 @@ Keyword: yolov8, esp now, python app, hardware design.
 Xây dựng một hệ thống máy quay giám sát dựa trên thuật toán học máy YOLO (You Only Look Once). Cho phép xác định ra các tình huống nguy hiểm dựa trên việc xác định được các vật thể bị cấm trong từng khu vực riêng biệt. Tăng độ an toàn cho các khu vực bằng việc đảm bảo các tình huống vi phạm an toàn khả năng phát hiện ra các tình huống không đảm bảo an toàn như việc thiếu đồ bảo hộ, không có người vận hành ở các vị trí quan trọng. Sau khi phát hiện được những tình huống, hệ thống sẽ kích hoạt cơ chế thông áo gửi tới người làm công tác giám sát từ xa thông qua sóng không dây ESP-NOW. Hỗ trợ những giám sát viên làm việc hiệu quả và nhanh chóng hơn.
 
 ## ❓ YOLO Là Gì Và Tại Sao Sử Dụng YOLO
-__YOLO__ (You Only Look Once) is a real-time object detection algorithm that identifies objects in images or video frames with high speed and accuracy. Unlike traditional methods that scan an image in multiple passes, YOLO processes the entire image in a single forward pass, making it very efficient.
+__YOLO__ (You Only Look Once) là một mô hình mạng CNN cho việc phát hiện, nhận dạng, phân loại đối tượng. Yolo được tạo ra từ việc kết hợp giữa các convolutional layers và connected layers.Trong đóp các convolutional layers sẽ trích xuất ra các feature của ảnh, còn full-connected layers sẽ dự đoán ra xác suất đó và tọa độ của đối tượng.
 
-It’s ideal for surveillance cameras due to its real-time detection speed and ability to track multiple objects efficiently.
+Thuật toán này phù hợp cho việc phân tích và phát hiện ra nhiều đối tượng trong một khung hình cùng lúc với tốc độ theo giờ gian thực.
 
 <br>
 
-<p align="center"><strong>Image Processor Unit Algorithm Diagram</strong></p>
+<p align="center"><strong>Sơ Đồ Thuật Toán Của Khổi Xử Lý Hình Ảnh</strong></p>
 
 ![Photo01](https://github.com/kysutrung/yolo_watchdog/blob/main/mediaa/image_processor_diagram.png)
 
 ## ❓ Sơ Lược Về Giao Thức ESP-NOW
-__ESP-NOW__ is a wireless communication protocol developed by Espressif for direct, low-power, peer-to-peer communication between devices, without the need for a Wi-Fi network. It uses the same 2.4GHz frequency as Wi-Fi but allows devices to send small packets of data to each other instantly, with minimal delay. It supports broadcasting to multiple devices and has a range similar to Wi-Fi.
+__ESP-NOW__  là một giao thức được phát triển bới Espressif, cho phép nhiều thiết bị giao tiếp với nhau mà không cần dùng Wifi. Giao thức tương tự như kết nối không dây 2.4GHz công suất thấp. ESP-NOW cho phép gửi gói tin tối đa 250kb nên hoàn toàn phù hợp cho việc gửi một thông điệp với nội dung cảnh báo giữa các thiết bị trong hệ thống giám sát an toàn.
 
 <br>
 
