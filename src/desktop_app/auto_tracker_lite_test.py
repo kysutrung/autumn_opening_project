@@ -13,8 +13,8 @@ BAUD = 9600
 CAM_ID = 1 
 WIDTH, HEIGHT = 640, 480
 
-SERVO1_INIT = 90   #trái-phải
-SERVO2_INIT = 90   #lên-xuống
+SERVO1_INIT = 90   #trái phải
+SERVO2_INIT = 90   #lên xuống
 SERVO_MIN, SERVO_MAX = 0, 180
 
 DEAD_ZONE = 100     #tính theo đơn vị px, đại diện cho vùng chết xung quanh tâm
